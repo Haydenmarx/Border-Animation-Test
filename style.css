@@ -25,25 +25,25 @@
 .box-container {
   position: relative; }
 
-.animated-box-top {
+.box-top {
   border-top: 3px solid black;
   position: absolute;
   top: -1000%;
   left: 0px; }
 
-.animated-box-right {
+.box-right {
   border-right: 3px solid black;
   position: absolute;
   top: 0px;
   left: -1000%; }
 
-.animated-box-bottom {
+.box-bottom {
   border-bottom: 3px solid black;
   position: absolute;
   top: 1000%;
   left: 0px; }
 
-.animated-box-left {
+.box-left {
   border-left: 3px solid black;
   position: absolute;
   top: 0px;
@@ -89,9 +89,5 @@
 .centered {
   display: block;
   margin: auto auto; }
-
-#master-button {
-  width: 81.138px;
-  height: 21.2px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@ function borderAnimation (section){
   if (section) {
     container = section
   }
-    $(container).children('.box-container').children('div').each(function(){
+    $(container).children('.box-container').children('.animated').each(function(){
       $(this).animate({
         top: 0,
         left: 0
@@ -29,5 +29,6 @@ $('.animate-button').on('click', function(){
 $('#master-button').on('click', function(){
   let parent = $('body');
   borderAnimation();
-  killButtons(parent);  
+  killButtons(parent);
+  $(this).css('display', 'none')  
 })
