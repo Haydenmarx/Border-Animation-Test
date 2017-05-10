@@ -1,0 +1,125 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  width: 1170px;
+  height: 410px;
+  padding-top: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  // overflow: hidden;
+
+  @media (max-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 200px;
+  }
+}
+
+
+.box-container {
+  position: relative;
+}
+
+.animated-box-top {
+  border-top: 3px solid black;
+  position: absolute;
+  top:-1000%;
+  left: 0px;
+}
+
+.animated-box-right {
+  border-right: 3px solid black;
+  position: absolute;
+  top: 0px;
+  left: -1000%;
+}
+
+.animated-box-bottom {
+  border-bottom: 3px solid black;
+  position: absolute;
+  top: 1000%;
+  left: 0px;
+}
+
+.animated-box-left {
+  border-left: 3px solid black;
+  position: absolute;
+  top: 0px;
+  left: 1000%;
+}
+
+.box-one {
+  width: 400px;
+  height: 400px;
+  margin: auto auto;
+}
+
+.box-two {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.box-three {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.animate-button {
+  position: absolute;
+}
+
+.button-lg {
+  width: 400px;
+  height: 400px;
+  margin: auto auto;  
+}
+
+.button-md {
+  width: 200px;
+  height: 200px;
+}
+
+.button-sm {
+  width: 150px;
+  height: 150px;
+}
+
+.small-margin {
+    margin: auto 5%;
+}
+
+.active-button {
+  cursor: pointer;
+}
+
+.centered {
+  display: block;
+  margin: auto auto;
+}
+
+#master-button {
+  width: 81.138px;
+  height: 21.2px;
+}
