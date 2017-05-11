@@ -45,14 +45,19 @@
   position: absolute;
   top:-1000%;
   left: 0px;
+  border-left: 3px solid rgba(999, 999, 999, .0);  
+  border-right: 3px solid rgba(999, 999, 999, .0);   
+  border-bottom: 3px solid rgba(999, 999, 999, .0); 
 }
 
 .box-right {
-  // border-top: 3px solid rgba(999, 999, 999, .0);  
   border-right: 3px solid black;
   position: absolute;
   top: 0px;
   left: -1000%;
+  border-top: 3px solid rgba(999, 999, 999, .0);  
+  border-bottom: 3px solid rgba(999, 999, 999, .0);  
+  border-left: 3px solid rgba(999, 999, 999, .0); 
 }
 
 .box-bottom {
@@ -60,6 +65,9 @@
   position: absolute;
   top: 1000%;
   left: 0px;
+  border-left: 3px solid rgba(999, 999, 999, .0);  
+  border-right: 3px solid rgba(999, 999, 999, .0); 
+  border-top: 3px solid rgba(999, 999, 999, .0);  
 }
 
 .box-left {
@@ -67,6 +75,9 @@
   position: absolute;
   top: 0px;
   left: 1000%;
+  border-top: 3px solid rgba(999, 999, 999, .0);  
+  border-bottom: 3px solid rgba(999, 999, 999, .0); 
+  border-right: 3px solid rgba(999, 999, 999, .0); 
 }
 
 .box-one {
@@ -90,23 +101,23 @@
 .animate-button {
   position: absolute;
   border: none;
-  outline:none;
+  outline: none;
 }
 
 .button-lg {
-  width: 400px;
-  height: 400px;
+  width: 403px;
+  height: 403px;
   margin: auto auto;  
 }
 
 .button-md {
-  width: 200px;
-  height: 200px;
+  width: 203px;
+  height: 203px;
 }
 
 .button-sm {
-  width: 150px;
-  height: 150px;
+  width: 153px;
+  height: 153px;
 }
 
 .small-margin {

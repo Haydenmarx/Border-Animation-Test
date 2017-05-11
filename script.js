@@ -13,9 +13,9 @@ function borderAnimation (section){
     }, timer)
     timer = timer+200;
   })
-  boxTop.promise().done(function() {
-    boxRight.css('border-top', '3px solid black');
-  })
+  // boxTop.promise().done(function() {
+  //   boxRight.css('border-top', '3px solid black');
+  // })
 }
 
 function killButtons (parent){
