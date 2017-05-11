@@ -24,6 +24,7 @@ function killButtons (parent){
 
 
 $('.animate-button').on('click', function(){
+  $('button').css('z-index', '-1');
   let section = "#" + $(this).data('animate');
   let parent = $(this).parent().parent();
   borderAnimation(section);
@@ -31,6 +32,7 @@ $('.animate-button').on('click', function(){
 })
 
 $('#master-button').on('click', function(){
+  $('button').css('z-index', '-1');
   let parent = $('body');
   borderAnimation();
   killButtons(parent);

@@ -4,8 +4,8 @@
 
 .container {
   width: 1170px;
-  height: 410px;
-  padding-top: 50px;
+  // height: 410px;
+  padding-top: 20px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -131,4 +131,12 @@
 .centered {
   display: block;
   margin: auto auto;
+}
+
+#section-2 {
+  width: 950px;
+}
+
+#section-3 {
+  width: 1050px;
 }
