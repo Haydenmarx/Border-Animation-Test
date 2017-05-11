@@ -14,7 +14,6 @@ function borderAnimation (section){
 }
 
 function killButtons (parent){
-  console.log(parent);
   parent.find('button').removeClass('active-button').text('');
 }
 
