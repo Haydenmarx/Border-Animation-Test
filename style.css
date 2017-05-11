@@ -65,7 +65,8 @@
   display: inline-block; }
 
 .animate-button {
-  position: absolute; }
+  position: absolute;
+  border: none; }
 
 .button-lg {
   width: 400px;

@@ -48,6 +48,7 @@
 }
 
 .box-right {
+  // border-top: 3px solid rgba(999, 999, 999, .0);  
   border-right: 3px solid black;
   position: absolute;
   top: 0px;
@@ -88,6 +89,7 @@
 
 .animate-button {
   position: absolute;
+  border: none;
 }
 
 .button-lg {
@@ -107,7 +109,7 @@
 }
 
 .small-margin {
-    margin: auto 5%;
+  margin: auto 5%;
 }
 
 .active-button {
