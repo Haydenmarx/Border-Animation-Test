@@ -5,7 +5,6 @@ function borderAnimation (section){
     container = section
   }
   let boxTop = $(container).find('.box-top');
-  let boxRight = $(container).find('.box-right');
   $(container).children('.box-container').children('.animated').each(function(){
     $(this).animate({
       top: 0,
@@ -13,9 +12,10 @@ function borderAnimation (section){
     }, timer)
     timer = timer+200;
   })
-  // boxTop.promise().done(function() {
-  //   boxRight.css('border-top', '3px solid black');
-  // })
+  boxTop.promise().done(function() {
+    $('.active-button').css('z-index', '2');
+    console.log('done');
+  })
 }
 
 function killButtons (parent){
@@ -24,7 +24,7 @@ function killButtons (parent){
 
 
 $('.animate-button').on('click', function(){
-  $('button').css('z-index', '-1');
+  $('.active-button').css('z-index', '-1');
   let section = "#" + $(this).data('animate');
   let parent = $(this).parent().parent();
   borderAnimation(section);
@@ -32,7 +32,7 @@ $('.animate-button').on('click', function(){
 })
 
 $('#master-button').on('click', function(){
-  $('button').css('z-index', '-1');
+  $('.active-button').css('z-index', '-1');
   let parent = $('body');
   borderAnimation();
   killButtons(parent);
