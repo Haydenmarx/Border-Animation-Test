@@ -13,8 +13,7 @@ function borderAnimation (section){
     timer = timer+200;
   })
   boxTop.promise().done(function() {
-    $('.active-button').css('z-index', '2');
-    console.log('done');
+    $('.active-button').css('z-index', '2').text('Press to animate this row');
   })
 }
 
@@ -24,7 +23,7 @@ function killButtons (parent){
 
 
 $('.animate-button').on('click', function(){
-  $('.active-button').css('z-index', '-1');
+  $('.active-button').css('z-index', '-1').text('Please wait until animation finishes');
   let section = "#" + $(this).data('animate');
   let parent = $(this).parent().parent();
   borderAnimation(section);
