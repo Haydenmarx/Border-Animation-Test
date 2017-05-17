@@ -1,6 +1,5 @@
 $('.animate-button').on('click', function() {
-  $('.active-button').css('z-index', '-1').text('Please wait until animation finishes');
-  $('.passive-button').text('Please wait until animation finishes');
+  $('.active-button').css('z-index', '-1')
   let section = "#" + $(this).data('animate');
   let parent = $(this).parent().parent();
   borderAnimation(section);
@@ -10,7 +9,7 @@ $('.animate-button').on('click', function() {
 $('#master-button').on('click', function() {
   $('.active-button').css('z-index', '-1');
   let parent = $('.wrapper');
-  borderAnimation();
+  borderAnimation('.active-row');
   killButtons(parent);
   $(this).css('display', 'none')  
 })
@@ -29,7 +28,7 @@ $('#reset-button').on('click', function() {
       $('.wrapper').find('.passive-button').each(function() {
         $(this).removeClass('passive-button').addClass('active-button').text('Press to animate this row');
         $('.wrapper').find('.animate-button').css('z-index', '2');
-        $('.wrapper').children('.passive-row').removeClass('passive-row');
+        parents.removeClass('passive-row').addClass('active-row');
       })
     })
   }
@@ -44,6 +43,7 @@ function borderAnimation (section) {
   if (section) {
     container = section
   }
+  $('.animate-button').text('Please wait until animation finishes');
   let boxTop = $(container).find('.box-top');
   animate (container, timer, top, left);
   boxTop.promise().done(function() {
@@ -57,7 +57,7 @@ function killButtons (parent) {
   if (parent.attr('class') === 'wrapper') {
     parent = '.container'
   }
-  $(parent).addClass('passive-row')
+  $(parent).addClass('passive-row').removeClass('active-row')
 }
 
 function animate (container, timer, top, left) {
