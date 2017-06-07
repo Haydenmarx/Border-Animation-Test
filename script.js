@@ -2,15 +2,16 @@ $('.animate-button').on('click', function() {
   $('.active-button').css('z-index', '-1')
   let section = "#" + $(this).data('animate');
   let parent = $(this).parent().parent();
+  let otherParent = this;
   borderAnimation(section);
-  killButtons(parent);
+  // killButtons(parent);
 })
 
 $('#master-button').on('click', function() {
   $('.active-button').css('z-index', '-1');
   let parent = $('.wrapper');
   borderAnimation('.active-row');
-  killButtons(parent);
+  // killButtons(parent);let parent = $('.wrapper');
   $(this).css('display', 'none')  
 })
 
@@ -35,7 +36,7 @@ $('#reset-button').on('click', function() {
 })
 
 
-function borderAnimation (section) {
+function borderAnimation (section, parent) {
   let timer = 1500;
   let container = '.container';
   let left = 0;
@@ -49,16 +50,23 @@ function borderAnimation (section) {
   boxTop.promise().done(function() {
     $('.active-button').css('z-index', '2').text('Press to animate this row');
     $('.passive-button').text('');
+    // console.log('parent =' + parent)
+    $(section).find('button').css('z-index', '-2').removeClass('active-button').text('').addClass('passive-button');
+    console.log(section)
+    if ($(section).attr('class') === 'wrapper') {
+      section = '.container'
+    }
+    $(section).addClass('passive-row').removeClass('active-row')
   })
 }
 
-function killButtons (parent) {
-  parent.find('button').removeClass('active-button').text('').addClass('passive-button');
-  if (parent.attr('class') === 'wrapper') {
-    parent = '.container'
-  }
-  $(parent).addClass('passive-row').removeClass('active-row')
-}
+// function killButtons (parent) {
+//   parent.find('button').removeClass('active-button').text('').addClass('passive-button');
+//   if (parent.attr('class') === 'wrapper') {
+//     parent = '.container'
+//   }
+//   $(parent).addClass('passive-row').removeClass('active-row')
+// }
 
 function animate (container, timer, top, left) {
   $(container).children('.box-container').children('.animated').each(function() {
